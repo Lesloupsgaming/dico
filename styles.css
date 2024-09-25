@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Animation de fade in pour la page */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#search {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fafafa;
+}
+
+#search:focus {
+    border-color: #ff8800;
+    box-shadow: 0 0 8px rgba(255, 136, 0, 0.5);
+}
+
+/* Effet de vague lors de l'input */
+#search::placeholder {
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+#search:focus::placeholder {
+    color: transparent;
+}
+
+.glossary {
+    margin-top: 10px;
+}
+
+.entry {
+    margin: 15px 0;
+    padding: 15px;
+    background: #fafafa;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+}
+
+/* Animation lors du chargement de la page */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.glossary .entry {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.entry:hover {
+    background: #ffebcc;
+    box-shadow: 0 8px 30px rgba(255, 136, 0, 0.2);
+}
+
+/* Effet de survol sur les entrées */
+.entry:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background: rgba(255, 136, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.entry:hover:before {
+    opacity: 1;
+}
+
+.word {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Animation de mot */
+.word {
+    position: relative;
+    display: inline-block;
+}
+
+.entry:hover .word {
+    animation: shake 0.5s forwards;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-2px);
+    }
+    50% {
+        transform: translateX(2px);
+    }
+    75% {
+        transform: translateX(-2px);
+    }
+}
+
+.definition {
+    font-size: 1rem;
+    margin-top: 5px;
+    color: #666;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.entry:hover .word {
+    color: #ff8800;
+}
+
+.entry:hover .definition {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Styles supplémentaires pour le titre */
+h1 {
+    font-size: 2rem;
+    color: #ff8800;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #555;
+    margin: 20px 0 10px;
+    border-bottom: 2px solid #ff8800;
+    padding-bottom: 5px;
+}
+
+/* Footer styles */
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #666;
+}
+
+.footer a {
+    color: #ff8800;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer a:hover {
+    color: #ff5a00;
+    transform: translateY(-2px);
+}
+
+/* Ajout d'icônes */
+.icon {
+    margin-right: 10px;
+    vertical-align: middle;
+    color: #ff8800;
+    transition: transform 0.3s ease;
+}
+
+/* Ajout d'animation sur les icônes au survol */
+.icon:hover {
+    transform: scale(1.2);
+}
+
+/* Animation de chargement du contenu */
+@keyframes contentLoad {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container {
+    animation: contentLoad 1s ease forwards;
+}
+
+/* Animation des liens dans le footer */
+.footer a {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: #ff5a00;
+    transition: transform 0.3s ease;
+    transform: translateX(-50%) scaleX(0);
+}
+
+.footer a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* Ajout d'un effet de reflet */
+.entry:hover {
+    background: linear-gradient(135deg, #ffcc80 0%, #ffebcc 100%);
+    animation: glow 0.5s ease infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 136, 0, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 136, 0, 0.6);
+    }
+}
+
+/* Effet de défilement du texte */
+@keyframes textScroll {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.word {
+    animation: textScroll 5s linear infinite alternate;
+}
+
+/* Animation de survol sur le conteneur */
+.container:hover {
+    transition: transform 0.3s ease;
+}
+
+/* Animation pour un titre de bienvenue */
+.welcome-title {
+    animation: bounceIn 1s;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Effet de basculement sur les définitions */
+.definition:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+/* Animation de clignotement sur les nouveaux mots ajoutés */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.entry.new {
+    animation: blink 1.5s infinite;
+}
+
+/* Éléments supplémentaires */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff8800;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #ff5a00;
+    transform: scale(1.05);
+}
+

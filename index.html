@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Dictionnaire</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="search" placeholder="Rechercher un mot..." onkeyup="filterGlossary()">
+        <div class="glossary">
+            <div class="entry">
+                <div class="word">chaise</div>
+                <div class="definition">Siège avec un dossier pour une personne.</div>
+            </div>
+            <div class="entry">
+                <div class="word">clé</div>
+                <div class="definition">Outil pour ouvrir ou fermer une serrure.</div>
+            </div>
+            <div class="entry">
+                <div class="word">couteau</div>
+                <div class="definition">Outil à lame utilisé pour couper.</div>
+            </div>
+            <div class="entry"><div class="word">angle</div><div class="definition">Figure géométrique formée par deux rayons ayant un point commun, l'angle.</div></div>
+    <div class="entry"><div class="word">armoire</div><div class="definition">Meuble avec des portes, utilisé pour ranger des vêtements ou des objets.</div></div>
+    <div class="entry"><div class="word">banc</div><div class="definition">Siège long sans dossier, souvent placé dans les espaces publics.</div></div>
+    <div class="entry"><div class="word">bureau</div><div class="definition">Mobilier servant à travailler, comportant généralement un plan de travail et des tiroirs.</div></div>
+    <div class="entry"><div class="word">cabinet</div><div class="definition">Pièce ou meuble fermé, souvent utilisé pour ranger des documents ou des objets précieux.</div></div>
+    <div class="entry"><div class="word">carreau</div><div class="definition">Pièce plate de céramique, utilisée pour le revêtement des murs ou des sols.</div></div>
+    <div class="entry"><div class="word">chaise</div><div class="definition">Meuble destiné à s'asseoir, avec un dossier et souvent des accoudoirs.</div></div>
+    <div class="entry"><div class="word">classe</div><div class="definition">Groupe d'élèves suivant un enseignement commun ou une salle où se déroule cet enseignement.</div></div>
+    <div class="entry"><div class="word">clé</div><div class="definition">Objet métallique permettant d'ouvrir ou de fermer une serrure.</div></div>
+    <div class="entry"><div class="word">coin</div><div class="definition">L'endroit où deux lignes ou surfaces se rencontrent.</div></div>
+    <div class="entry"><div class="word">couloir</div><div class="definition">Passage long et étroit dans un bâtiment, reliant différentes pièces.</div></div>
+    <div class="entry"><div class="word">dossier</div><div class="definition">Ensemble de documents regroupés, souvent rangé dans un classeur.</div></div>
+    <div class="entry"><div class="word">eau</div><div class="definition">Liquide transparent, incolore et insipide, essentiel à la vie.</div></div>
+    <div class="entry"><div class="word">école</div><div class="definition">Établissement où l'on dispense un enseignement aux élèves.</div></div>
+    <div class="entry"><div class="word">écriture</div><div class="definition">Action de former des lettres, des mots et des phrases sur un support.</div></div>
+    <div class="entry"><div class="word">entrée</div><div class="definition">Point d'accès à un lieu ou à un bâtiment.</div></div>
+    <div class="entry"><div class="word">escalier</div><div class="definition">Construction permettant de passer d'un niveau à un autre à l'aide de marches.</div></div>
+    <div class="entry"><div class="word">étagère</div><div class="definition">Meuble constitué de planches horizontales, servant à poser des objets.</div></div>
+    <div class="entry"><div class="word">étude</div><div class="definition">Action d'apprendre ou d'examiner en profondeur un sujet.</div></div>
+    <div class="entry"><div class="word">extérieur</div><div class="definition">Partie d'un espace située à l'extérieur d'un bâtiment.</div></div>
+    <div class="entry"><div class="word">fenêtre</div><div class="definition">Ouverture dans un mur, souvent vitrée, permettant de laisser entrer la lumière.</div></div>
+    <div class="entry"><div class="word">intérieur</div><div class="definition">Partie d'un espace située à l'intérieur d'un bâtiment.</div></div>
+    <div class="entry"><div class="word">lavabo</div><div class="definition">Équipement sanitaire permettant de se laver les mains et le visage.</div></div>
+    <div class="entry"><div class="word">lecture</div><div class="definition">Action de lire un texte ou un document.</div></div>
+    <div class="entry"><div class="word">lit</div><div class="definition">Meuble destiné à dormir, généralement constitué d'un sommier et d'un matelas.</div></div>
+    <div class="entry"><div class="word">marche</div><div class="definition">Action de monter ou descendre par des marches.</div></div>
+    <div class="entry"><div class="word">matelas</div><div class="definition">Élément rembourré posé sur un lit pour le confort de sommeil.</div></div>
+    <div class="entry"><div class="word">maternelle</div><div class="definition">École destinée aux jeunes enfants avant l'école primaire.</div></div>
+    <div class="entry"><div class="word">meuble</div><div class="definition">Objet mobile servant à aménager un espace, comme des chaises, des tables, etc.</div></div>
+    <div class="entry"><div class="word">mousse</div><div class="definition">Substance légère, souvent spongieuse, utilisée pour le confort ou l'isolation.</div></div>
+    <div class="entry"><div class="word">mur</div><div class="definition">Surface verticale, formant une partie d'une structure ou d'un bâtiment.</div></div>
+    <div class="entry"><div class="word">peluche</div><div class="definition">Jouet doux et moelleux, souvent en forme d'animal.</div></div>
+    <div class="entry"><div class="word">placard</div><div class="definition">Meuble de rangement, souvent encastré dans le mur, avec des portes.</div></div>
+    <div class="entry"><div class="word">plafond</div><div class="definition">Surface supérieure d'une pièce, formant la partie haute d'un espace.</div></div>
+    <div class="entry"><div class="word">porte</div><div class="definition">Ouvrage mobile permettant de fermer ou d'ouvrir un passage.</div></div>
+    <div class="entry"><div class="word">portemanteau</div><div class="definition">Meuble ou support pour suspendre des vêtements.</div></div>
+    <div class="entry"><div class="word">poubelle</div><div class="definition">Conteneur destiné à recevoir les déchets.</div></div>
+    <div class="entry"><div class="word">radiateur</div><div class="definition">Appareil utilisé pour chauffer une pièce en diffusant de la chaleur.</div></div>
+    <div class="entry"><div class="word">rampe</div><div class="definition">Structure inclinée permettant de passer d'un niveau à un autre.</div></div>
+    <div class="entry"><div class="word">récréation</div><div class="definition">Temps de pause durant lequel les élèves peuvent se détendre et jouer.</div></div>
+    <div class="entry"><div class="word">rentrée</div><div class="definition">Retour à l'école après les vacances, marquant le début d'une nouvelle année scolaire.</div></div>
+    <div class="entry"><div class="word">rideau</div><div class="definition">Tissu suspendu devant une fenêtre pour filtrer la lumière ou préserver l'intimité.</div></div>
+    <div class="entry"><div class="word">robinet</div><div class="definition">Dispositif permettant de contrôler le débit d'eau d'une conduite.</div></div>
+    <div class="entry"><div class="word">salle</div><div class="definition">Espace délimité à l'intérieur d'un bâtiment, servant à différentes activités.</div></div>
+    <div class="entry"><div class="word">savon</div><div class="definition">Produit utilisé pour nettoyer la peau ou les objets, souvent en barre ou liquide.</div></div>
+    <div class="entry"><div class="word">souris</div><div class="definition">Petit appareil de pointage utilisé avec un ordinateur.</div></div>
+    <div class="entry"><div class="word">stylo</div><div class="definition">Instrument d'écriture utilisant de l'encre.</div></div>
+    <div class="entry"><div class="word">téléphone</div><div class="definition">Appareil servant à communiquer à distance par la voix.</div></div>
+    <div class="entry"><div class="word">trousse</div><div class="definition">Petite poche ou étui contenant des fournitures scolaires.</div></div>
+    <div class="entry"><div class="word">vélo</div><div class="definition">Véhicule à deux roues, propulsé par la force des jambes.</div></div>
+    <div class="entry"><div class="word">vitre</div><div class="definition">Plaque de verre permettant de laisser passer la lumière tout en séparant les espaces.</div></div>
+    <div class="entry"><div class="word">voiture</div><div class="definition">Véhicule automobile destiné au transport de personnes ou de marchandises.</div></div>
+    <div class="entry"><div class="word">arriver</div><div class="definition">Atteindre un lieu ou un état.</div></div>
+    <div class="entry"><div class="word">chercher</div><div class="definition">Tenter de trouver quelque chose ou quelqu'un.</div></div>
+    <div class="entry"><div class="word">découvrir</div><div class="definition">Trouver quelque chose pour la première fois.</div></div>
+    <div class="entry"><div class="word">écouter</div><div class="definition">Prêter attention à des sons ou à des paroles.</div></div>
+    <div class="entry"><div class="word">entendre</div><div class="definition">Percevoir un son avec son oreille.</div></div>
+    <div class="entry"><div class="word">être</div><div class="definition">Avoir une existence, une réalité.</div></div>
+    <div class="entry"><div class="word">faire</div><div class="definition">Produire, réaliser une action ou un objet.</div></div>
+    <div class="entry"><div class="word">jouer</div><div class="definition">Participer à un jeu ou à une activité ludique.</div></div>
+    <div class="entry"><div class="word">lire</div><div class="definition">Comprendre des mots écrits sur une page.</div></div>
+    <div class="entry"><div class="word">marcher</div><div class="definition">Se déplacer en mettant un pied devant l'autre.</div></div>
+    <div class="entry"><div class="word">parler</div><div class="definition">Exprimer des pensées ou des idées à travers la parole.</div></div>
+    <div class="entry"><div class="word">penser</div><div class="definition">Avoir une pensée ou une idée sur quelque chose.</div></div>
+    <div class="entry"><div class="word">regarder</div><div class="definition">Fixer son regard sur quelque chose.</div></div>
+    <div class="entry"><div class="word">rendre</div><div class="definition">Restituer quelque chose à quelqu'un.</div></div>
+    <div class="entry"><div class="word">sauter</div><div class="definition">Se propulser dans l'air avec les jambes.</div></div>
+    <div class="entry"><div class="word">travailler</div><div class="definition">Effectuer une tâche ou une activité pour produire un résultat.</div></div>
+    <div class="entry"><div class="word">voir</div><div class="definition">Percevoir avec les yeux, observer.</div></div>
+    <div class="entry"><div class="word">ami</div><div class="definition">Personne avec qui l'on a des relations amicales.</div></div>
+    <div class="entry"><div class="word">attention</div><div class="definition">État de concentration sur quelque chose.</div></div>
+    <div class="entry"><div class="word">camarade</div><div class="definition">Personne avec qui on partage une activité ou une classe.</div></div>
+    <div class="entry"><div class="word">colère</div><div class="definition">Émotion forte résultant d'une frustration ou d'une injustice.</div></div>
+    <div class="entry"><div class="word">copain</div><div class="definition">Ami ou camarade avec qui l'on a des relations amicales.</div></div>
+    <div class="entry"><div class="word">dame</div><div class="definition">Femme, souvent utilisée pour désigner une femme respectée.</div></div>
+    <div class="entry"><div class="word">directeur</div><div class="definition">Personne en charge de la direction d'une institution ou d'une organisation.</div></div>
+    <div class="entry"><div class="word">fille</div><div class="definition">Enfant ou jeune femme de sexe féminin.</div></div>
+    <div class="entry"><div class="word">garçon</div><div class="definition">Enfant ou jeune homme de sexe masculin.</div></div>
+    <div class="entry"><div class="word">maître</div><div class="definition">Personne qui enseigne, souvent à l'école primaire.</div></div>
+    <div class="entry"><div class="word">personne</div><div class="definition">Individu, être humain.</div></div>
+    <div class="entry"><div class="word">sourire</div><div class="definition">Expression faciale marquée par un léger mouvement des lèvres, souvent signe de bonheur.</div></div>
+    <div class="entry"><div class="word">travail</div><div class="definition">Activité effectuée pour obtenir un résultat, souvent rémunérée.</div></div>
+            <!-- Ajoute d'autres entrées -->
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
